@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Submitted Data</title>
+<style>
+    table {
+        border-collapse: collapse;
+        width: 100%;
+    }
+
+    th, td {
+        border: 1px solid #dddddd;
+        text-align: left;
+        padding: 8px;
+    }
+
+    th {
+        background-color: #f2f2f2;
+    }
+</style>
+</head>
+<body>
+<h2>Submitted Data</h2>
+<table id="data-table">
+    <thead>
+        <tr>
+            <th>Full Name</th>
+            <th>Email Address</th>
+            <th>Phone Number</th>
+            <th>Birth Date</th>
+            <th>Gender</th>
+            <th>Address</th>
+        </tr>
+    </thead>
+    <tbody id="data-body">
+        <!-- Data from form submission will be added here dynamically -->
+    </tbody>
+</table>
+
+<script>
+    // Function to add submitted data to the table
+    function addDataToTable(data) {
+        var tbody = document.getElementById('data-body');
+        var newRow = document.createElement('tr');
+        newRow.innerHTML = `
+            <td>${data.fullName}</td>
+            <td>${data.email}</td>
+            <td>${data.phone}</td>
+            <td>${data.birthDate}</td>
+            <td>${data.gender}</td>
+            <td>${data.address}</td>
+        `;
+        tbody.appendChild(newRow);
+    }
+
+    // Sample data object (replace this with actual data from form submission)
+    var sampleData = {
+        fullName: "John Doe",
+        email: "johndoe@example.com",
+        phone: "123-456-7890",
+        birthDate: "1990-01-01",
+        gender: "Male",
+        address: "123 Street, City, State, 12345"
+    };
+
+    // Add sample data to the table
+    addDataToTable(sampleData);
+</script>
+</body>
+</html>

@@ -1,0 +1,307 @@
+/* Mengatur padding, margin, dan font default untuk semua elemen */
+* {
+	padding:0;
+	margin:0;
+	font-family: sans-serif;
+}
+/* Mengatur gaya untuk elemen <a> */
+a {
+	color: inherit;
+	text-decoration: none;
+}
+/* Gaya untuk bagian medsos */
+.medsos {
+	padding:5px 0;
+	background-color: #FFC0CB;
+}
+/* Gaya untuk setiap item dalam daftar medsos */
+.medsos ul li {
+	display: inline-block;
+	color: #fff;
+	margin-right: 10px;
+}
+/* Mengatur gaya untuk kontainer */
+.container {
+	width:80%;
+	margin:0 auto;
+}
+/* Mengatur setelah elemen kontainer */
+.container:after {
+	content:'';
+	display: block;
+	clear: both;
+}
+/* Gaya untuk header dan elemen <h1> dalam header */
+header h1 {
+	float: left;
+	padding:15px 0;
+	color: #FFC0CB;
+}
+/* Mengatur gaya untuk daftar dalam header */
+header ul {
+	float: right;
+}
+/* Gaya untuk item dalam daftar header */
+header ul li {
+	display: inline-block;
+}
+/* Gaya untuk link dalam item daftar header */
+header ul li a {
+	padding:25px 20px;
+	display: inline-block;
+}
+/* Gaya saat hover pada link dalam header */
+header ul li a:hover {
+	background-color: #FFC0CB;
+	color: #fff;
+}
+/* Gaya untuk item aktif dalam header */
+.active {
+	background-color: #FFC0CB;
+	color: #fff;
+}
+/* Gaya untuk banner */
+.banner {
+	height: 60vh;
+	background-image: url('../img/banner.jpg');
+	background-size: cover;
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+/* Gaya overlay untuk banner */
+.banner:after {
+	content:'';
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: rgba(201, 117, 194, 0.6);
+}
+/* Gaya untuk teks dalam banner */
+.banner h2 {
+	color: #fff;
+	z-index: 1;
+	padding: 20px 25px;
+	border:3px solid #fff;
+}
+/* Gaya untuk bagian section */
+section {
+	padding:50px 0;
+}
+/* Gaya untuk judul section */
+section h3 {
+	text-align: center;
+	padding:20px 0;
+	color: #FFC0CB;
+	margin-bottom: 25px;
+}
+/* Gaya untuk section about dan service */
+.about,
+.service {
+	padding-bottom: 100px;
+}
+/* Gaya untuk paragraf dalam section about */
+.about p {
+	color: #666;
+	word-spacing: 2px;
+	line-height: 25px;
+	margin-bottom: 20px;
+	text-align: center;
+}
+/* Gaya untuk section service */
+.service {
+	background-color: #f9f9f9;
+}
+/* Gaya untuk kotak dalam section service */
+.box {
+	color: #FFC0CB;
+}
+/* Gaya setelah elemen dalam kotak */
+.box:after {
+	content: '';
+	display: block;
+	clear: both;
+}
+/* Gaya untuk kolom dalam kotak */
+.box .col-4 {
+	width:25%;
+	padding:20px;
+	box-sizing: border-box;
+	text-align: center;
+	float: left;
+}
+/* Gaya untuk ikon dalam kolom */
+.icon {
+	width:70px;
+	height:70px;
+	border:1px solid;
+	border-radius: 50%;
+	text-align: center;
+	line-height: 70px;
+	font-size: 20px;
+	margin:0 auto;
+}
+/* Gaya untuk judul dalam kolom */
+.box .col-4 h4 {
+	margin:20px 0;
+}
+/* Gaya untuk footer */
+footer {
+	padding:30px 0;
+	background-color: #333;
+	color: #fff;
+	text-align: center;
+}
+/* Gaya untuk background loader */
+.bg-loader {
+	background-color: #eee;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 9999;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+/* Gaya untuk loader */
+.bg-loader .loader {
+	width:100px;
+	height: 100px;
+	border:3px solid #fff;
+	border-radius: 50%;
+	border-top-color: #FFC0CB;
+	border-right-color: #FFC0CB;
+	border-bottom-color: #FFC0CB;
+	animation: puterin .8s linear infinite;
+}
+
+/* Gaya untuk label navigasi */
+.label {
+	background-color: #FFC0CB;
+	color: #fff;
+}
+/* Animasi untuk loader */
+@keyframes puterin {
+	100% {
+		transform: rotate(360deg);
+	}
+}
+/* Gaya responsif untuk layar kecil */
+@media screen and (max-width: 768px){
+	.container {
+		width:90%;
+	}
+	header h1 {
+		text-align: center;
+		float: none;
+	}
+	header ul {
+		text-align: center;
+		float: none;
+	}
+	.box .col-4 {
+		width:100%;
+		float: none;
+		margin-bottom: 20px;
+	}
+}
+
+/* =======CARDS======= */
+
+/* Kontainer kategori */
+.category {
+    width: 100%; 
+    display: flex; 
+    margin-bottom: 50px; 
+    justify-content: center; 
+}
+
+/* Daftar item kategori */
+.category .list-items {
+    width: 90%; 
+    position: relative; 
+    margin-top: 50px; 
+}
+
+/* Judul kategori */
+.category .list-items h3 {
+    font-size: 25px; 
+    font-weight: 600; 
+    font-family: sans-serif; 
+    margin-bottom: 150px; 
+}
+
+/* Daftar kartu kategori */
+.category .list-items .card-list {
+    display: grid; 
+    grid-template-columns: repeat(4, 1fr); 
+
+}
+
+/* Kartu dalam daftar kartu kategori */
+.category .card-list .card {
+    width: 200px;
+    height: auto; 
+    display: block; 
+    padding: 10px; 
+    border-radius: 10px; 
+    position: relative; 
+    background: #ffffff;
+    outline: 2px solid #FF69B4; 
+}
+
+/* Gambar dalam kartu */
+.category .card-list .card banner.jpg {
+    width: 100px; 
+    height: auto; 
+    bottom: 220px; 
+    left: 60px; 
+    object-fit: cover; 
+    object-position: center; 
+    background-repeat: no-repeat; 
+    position: absolute; 
+    box-shadow: 0 20px 20px #FFB6C1; 
+    border-radius: 50%; 
+}
+
+/* Judul anime dalam kartu */
+.category .card-list .card .anime-title {
+    padding: 40px 0 10px; 
+	bottom: 110px;
+}
+
+/* Judul h1 dalam judul anime */
+.category .card-list .card .anime-title h1 {
+    text-align: center;
+    font-weight: bold;
+    font-size: 18px;
+    font-family: sans-serif;
+}
+
+/* Deskripsi anime dalam kartu */
+.category .card .desc-anime p {
+    font-size: 15px; 
+    text-align: center;
+    font-weight: 500;
+    margin-bottom: 20px; 
+    font-family: sans-serif; 
+}
+
+/* =======scroll-bar======= */
+
+/* Gaya untuk scrollbar */
+::-webkit-scrollbar {
+    width: 10px; /* Lebar scrollbar */
+}
+
+/* Gaya untuk thumb scrollbar */
+::-webkit-scrollbar-thumb {
+    border-radius: 20px; 
+    background-color: #FF69B4; /* Warna latar belakang */
+}
